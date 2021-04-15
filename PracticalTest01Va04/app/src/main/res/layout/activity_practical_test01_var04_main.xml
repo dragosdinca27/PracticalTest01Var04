@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="ro.pub.cs.systems.eim.practicaltest01va04.PracticalTest01Var0MainActivity" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/navigate_to_secondary_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/navigate_to_secondary_activity" />
+
+    <CheckBox
+        android:id="@+id/name_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigate_to_secondary_activity_button"
+        android:layout_alignStart="@id/name_edit_text"
+        />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:saveEnabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_check_box"
+        android:ems="10"
+        android:hint="Perfect Student"
+        android:inputType="text" >
+    <requestFocus />
+
+    </EditText>
+
+
+    <CheckBox
+        android:id="@+id/group_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_edit_text"
+        android:layout_alignStart="@id/name_edit_text"
+        />
+
+    <EditText
+        android:id="@+id/group_edit_text"
+        android:saveEnabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_check_box"
+        android:ems="10"
+        android:hint="343C4"
+        android:inputType="text" >
+        <requestFocus />
+
+    </EditText>
+
+    <Button
+        android:id="@+id/display_information_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/group_edit_text"
+        android:text="@string/display_information" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:saveEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/display_information_button"
+        android:text="Perfect student"
+        android:textSize="20sp" />
+
+</RelativeLayout>
